@@ -2,9 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>ứng dụng máy tính</title>
 </head>
 <body>
-
+    <h2>Caculator</h2>
+<table>
+    <tr>
+        <td colspan="2"><input type="number" id="a"/></td>
+        <td colspan="2"><input type="number" id="b"/></td>
+    </tr>
+    <tr>
+        <td><button onclick="addition()">Addition(+)</button></td>
+        <td><button onclick="subtraction()">Subtraction(-)</button></td>
+        <td><button onclick="multiplication()">Multiplicatio(x)</button></td>
+        <td><button onclick="division()">Division(/)</button></td>
+    </tr>
+    <tr>
+        <td><b>result Division:</b></td>
+        <td id="result"> </td>
+    </tr>
+</table>
+<script>
+    function addition() {
+        let a= document.getElementById("a").value;
+        let b= document.getElementById("b").value;
+        let r= parseInt(a)+parseInt(b);
+        document.getElementById("result").innerText= r;
+    }
+    function subtraction() {
+        let a= document.getElementById("a").value;
+        let b= document.getElementById("b").value;
+        let r= parseInt(a)-parseInt(b);
+        document.getElementById("result").innerText= r;
+    }
+    function multiplication() {
+        let a= document.getElementById("a").value;
+        let b= document.getElementById("b").value;
+        let r= parseInt(a)*parseInt(b);
+        document.getElementById("result").innerText= r;
+    }
+    function division() {
+        let a= document.getElementById("a").value;
+        let b= document.getElementById("b").value;
+        let r= parseInt(a)/parseInt(b);
+        document.getElementById("result").innerText= r;
+    }
+</script>
 </body>
 </html>
