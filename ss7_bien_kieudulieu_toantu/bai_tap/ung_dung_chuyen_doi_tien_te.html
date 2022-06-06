@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input type="number" id="amount"></td>
+            <td><select id="from">
+                <option value="vnd">VND</option>
+                <option value="usd">USD</option>
+            </select></td>
+            <td><select id="to">
+                <option value="vnd">VND</option>
+                <option value="usd">USD</option>
+            </select></td>
+            <td><button onclick="add()" style="background: cornflowerblue">Convert</button></td>
+        </tr>
+    </table>
+    <br>
+    <b>Result: </b><span id="result"></span>
+    <script>
+        function add() {
+            let a = document.getElementById("amount").value;
+            let f = document.getElementById("from").value;
+            let t = document.getElementById("to").value;
+            let r;
+            if (f == "usd" && t == "vnd") {
+                r = (a*23000) + " (VND)";
+            }
+            else
+            if (f == "vnd" && t == "usd") {
+                r = (a/23000) + " (USD)";
+            }
+            else
+            if (f == "usd") {
+                r = a + " (USD)";
+            }
+            else {
+                r = a + " (VND)";
+            }
+            document.getElementById("result").innerText = r;
+        }
+    </script>
+</body>
+</html>
