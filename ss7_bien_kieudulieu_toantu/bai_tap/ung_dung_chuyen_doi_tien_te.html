@@ -29,25 +29,25 @@
     <b>Result: </b><span id="result"></span>
     <script>
         function add() {
-            let a = document.getElementById("amount").value;
-            let f = document.getElementById("from").value;
-            let t = document.getElementById("to").value;
-            let r;
-            if (f == "usd" && t == "vnd") {
-                r = (a*23000) + " (VND)";
+            let amount = document.getElementById("amount").value;
+            let fromCurrency = document.getElementById("from").value;
+            let toCurrency  = document.getElementById("to").value;
+            let result;
+            if (fromCurrency == "usd" && toCurrency == "vnd") {
+                result = (a*23000) + " (VND)";
             }
             else
-            if (f == "vnd" && t == "usd") {
-                r = (a/23000) + " (USD)";
+            if (fromCurrency == "vnd" && toCurrency == "usd") {
+                result = (a/23000) + " (USD)";
             }
             else
-            if (f == "usd") {
-                r = a + " (USD)";
+            if (fromCurrency == "usd") {
+                result = a + " (USD)";
             }
             else {
-                r = a + " (VND)";
+                result = a + " (VND)";
             }
-            document.getElementById("result").innerText = r;
+            document.getElementById("result").innerText = result;
         }
     </script>
 </body>
