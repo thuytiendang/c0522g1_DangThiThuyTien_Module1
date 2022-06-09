@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let midTermPoint= parseFloat(prompt('input mid-term point: '));
+    let finalTermPoint= parseFloat(prompt('input final-term point: '));
+    let average= ((midTermPoint * 4) + (finalTermPoint *6))/10;
+    if (average >= 8) {
+        alert('hoc luc tot');
+    } else if (average >= 7) {
+        alert('hoc luc kha');
+    } else if (average >= 5) {
+        alert('hoc luc trung binh');
+    } else {
+        alert('hoc luc yeu');
+    }
+</script>
+</body>
+</html>

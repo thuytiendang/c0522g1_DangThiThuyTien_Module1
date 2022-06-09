@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 5</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt('nhap canh a: '));
+    let b = parseFloat(prompt('nhap canh b: '));
+    let condition1 = a % a == 0 || a == 0;
+    let condition2 = b % b == 0 || b == 0;
+    if(condition1 && condition2) {
+        if (a > 0 && b > 0) {
+            let area = 1/2 * a *b;
+            alert('dien tich hinh tam giac la: ' + area);
+        } else {
+            alert('nhap lai so duong');
+        }
+    } else {
+        alert('ban nhap khong phai la so');
+    }
+</script>
+</body>
+</html>

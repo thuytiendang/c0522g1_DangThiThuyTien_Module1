@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let width = parseFloat(prompt('nhap chieu rong: '));
+    let height = parseFloat(prompt('nhap chieu dai: '));
+    let condition1 = width % width == 0 || width == 0;
+    let condition2 = height % height == 0 || height == 0;
+    if(condition1 && condition2) {
+        if (width > 0 && height > 0) {
+            let area = width * height;
+            alert('dien tich hinh chu nhat la: ' + area);
+        } else {
+            alert('nhap lai so duong');
+        }
+    } else {
+        alert('ban nhap khong phai la so');
+    }
+</script>
+</body>
+</html>
