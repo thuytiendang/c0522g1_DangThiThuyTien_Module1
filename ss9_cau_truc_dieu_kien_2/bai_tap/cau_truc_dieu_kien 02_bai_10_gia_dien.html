@@ -5,60 +5,80 @@
     <title>bai 10 </title>
 </head>
 <body>
-
-<!--    // let electricNumber = parseInt(prompt('input electric number (kWh): '));-->
-<!--    // let rank1 = electricNumber > 0 && electricNumber <= 50;-->
-<!--    // let rank2 = electricNumber > 51 && electricNumber <= 100;-->
-<!--    // let rank3 = electricNumber > 101 && electricNumber <= 200;-->
-<!--    // let rank4 = electricNumber > 201 && electricNumber <= 300;-->
-<!--    // let rank5 = electricNumber > 301 && electricNumber <= 400;-->
-<!--    // switch (electricNumber) {-->
-<!--    //     case rank1: var money=electricNumber*1.678; break;-->
-<!--    //     case rank2: var money=electricNumber*1.734; break;-->
-<!--    //     case rank3: var money=electricNumber*2.014; break;-->
-<!--    //     case rank4: var money=electricNumber*2.536; break;-->
-<!--    //     case rank5: var money=electricNumber*2.834; break;-->
-<!--    //     default: var money=electricNumber*2.927; break;-->
-<!--    // }  document.write('tien dien cua quy khach la: ' + money);-->
+<!--<script>-->
+<!--    let electricNumber = parseInt(prompt('input electric number (kWh): '));-->
+<!--    let rank = 0-->
+<!--    if (electricNumber > 0 && electricNumber <= 50) {-->
+<!--        rank = 1;-->
+<!--    } else if (electricNumber > 51 && electricNumber <= 100) {-->
+<!--        rank = 2;-->
+<!--    } else if (electricNumber > 101 && electricNumber <= 200) {-->
+<!--        rank = 3;-->
+<!--    } else if (electricNumber > 201 && electricNumber <= 300) {-->
+<!--        rank = 4;-->
+<!--    } else if (electricNumber > 301 && electricNumber <= 400) {-->
+<!--        rank = 5;-->
+<!--    }-->
+<!--    let money;-->
+<!--    console.log(rank)-->
+<!--    switch (rank) {-->
+<!--        case 1:-->
+<!--            money = electricNumber * 1.678;-->
+<!--            break;-->
+<!--        case 2:-->
+<!--            money = electricNumber * 1.734;-->
+<!--            break;-->
+<!--        case 3:-->
+<!--            money = electricNumber * 2.014;-->
+<!--            break;-->
+<!--        case 4:-->
+<!--            money = electricNumber * 2.536;-->
+<!--            break;-->
+<!--        case 5:-->
+<!--            money = electricNumber * 2.834;-->
+<!--            break;-->
+<!--        default:-->
+<!--            money = electricNumber * 2.927;-->
+<!--            break;-->
+<!--    }-->
+<!--    document.write('tien dien cua quy khach la: ' + money);-->
+<!--</script>-->
 
 <script>
     let electricNumber = parseInt(prompt('input electric number (kWh): '));
-    let rank = 0
-    if (electricNumber > 0 && electricNumber <= 50) {
-        rank = 1;
-    } else if (electricNumber > 51 && electricNumber <= 100) {
-        rank = 2;
-    } else if (electricNumber > 101 && electricNumber <= 200) {
-        rank = 3;
-    } else if (electricNumber > 201 && electricNumber <= 300) {
-        rank = 4;
-    } else if (electricNumber > 301 && electricNumber <= 400) {
-        rank = 5;
-    }
+    let rank1 = electricNumber > 0 && electricNumber <= 50;
+    let rank2 = electricNumber > 51 && electricNumber <= 100;
+    let rank3 = electricNumber > 101 && electricNumber <= 200;
+    let rank4 = electricNumber > 201 && electricNumber <= 300;
+    let rank5 = electricNumber > 301 && electricNumber <= 400;
     let money;
-    console.log(rank)
-    switch (rank) {
-        case 1:
+    switch (true) {
+        case rank1:
             money = electricNumber * 1.678;
+            document.write('tien dien cua quy khach la: ' + money);
             break;
-        case 2:
+        case rank2:
             money = electricNumber * 1.734;
+            document.write('tien dien cua quy khach la: ' + money);
             break;
-        case 3:
+        case rank3:
             money = electricNumber * 2.014;
+            document.write('tien dien cua quy khach la: ' + money);
             break;
-        case 4:
+        case rank4:
             money = electricNumber * 2.536;
+            document.write('tien dien cua quy khach la: ' + money);
             break;
-        case 5:
+        case rank5:
             money = electricNumber * 2.834;
+            document.write('tien dien cua quy khach la: ' + money);
             break;
         default:
             money = electricNumber * 2.927;
+            document.write('tien dien cua quy khach la: ' + money);
             break;
     }
-    document.write('tien dien cua quy khach la: ' + money);
-</script>
 
+</script>
 </body>
 </html>

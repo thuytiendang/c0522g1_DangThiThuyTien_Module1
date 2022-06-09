@@ -5,6 +5,25 @@
     <title>bai 11</title>
 </head>
 <body>
-
+<script>
+    let salary = parseFloat(prompt('input salary (million): '));
+    let tax;
+    if (salary <= 5) {
+        tax = salary * 5 / 100;
+    } else if (salary <= 10) {
+        tax = salary * 10 / 100;
+    } else if (salary <= 18) {
+        tax = salary * 15 / 100;
+    } else if (salary <= 32) {
+        tax = salary * 20 / 100;
+    } else if (salary <= 52) {
+        tax = salary * 25 / 100;
+    } else if (salary <= 80) {
+        tax = salary * 30 / 100;
+    } else {
+        tax = salary * 35 / 100;
+    }
+    document.write('thue thu nhap cua ban la: ' + tax);
+</script>
 </body>
 </html>

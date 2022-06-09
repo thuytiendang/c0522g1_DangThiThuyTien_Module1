@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 12</title>
+</head>
+<body>
+<script>
+    let loan = parseFloat(prompt('input loan: '));
+    let loanMonth = parseFloat(prompt('input loanMonth: '));
+    let interestMonth = parseFloat(prompt('input interestMonth: '));
+    let interest;
+    if (loanMonth <= 6) {
+        interest = loan * interestMonth + loan * 2 / 100;
+    } else if (loanMonth <= 12) {
+        interest = loan * interestMonth + loan * 5 / 100;
+    } else if (loanMonth <= 18) {
+        interest = loan * interestMonth + loan * 10 / 100;
+    } else {
+        interest = loan * interestMonth + loan * 15 / 100;
+    }
+    document.write('lai xuat cua ban la: ' + interest);
+</script>
+</body>
+</html>
