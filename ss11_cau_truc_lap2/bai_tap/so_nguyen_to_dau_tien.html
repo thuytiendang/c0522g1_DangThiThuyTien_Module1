@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hien thi cac so nguyen to dau tien </title>
+</head>
+<body>
+<!--snt chia het cho 1 va chinh no-->
+<!--num num %1 -> num%num-->
+<!--<script>-->
+<!--let number= parseInt(prompt('nhap so 1: '));-->
+<!--let uoc= 0;-->
+<!--for (let i= 1; i<=number;i++) {-->
+<!--    if(number % i === 0) {-->
+<!--        uoc++;-->
+<!--    }-->
+<!--}-->
+<!--if(uoc==2) {-->
+<!--    alert(' laf so nt')-->
+<!--} else {-->
+<!--    alert('k laf snt')-->
+<!--}-->
+
+<script>
+    let number= parseInt(prompt('nhap so luong so nguyen to can in ra'));
+    let count=0;
+    let divisor=0;
+    for (let i = 2; i <= 1000; i++) {
+        if (count < number) {
+            for (let j=1; j<=i; j++) {
+                if (i % j ==0) {
+                    divisor++;
+                }
+            } if (divisor==2) {
+                document.write(i + '<br>');
+                count++;
+            }
+            divisor = 0;
+        } else {
+            break;
+        }
+    }
+</script>
+</body>
+</html>

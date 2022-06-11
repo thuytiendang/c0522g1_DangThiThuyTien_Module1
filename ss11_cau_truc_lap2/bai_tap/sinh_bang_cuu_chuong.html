@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bảng cửu chương</title>
+</head>
+<body>
+
+<h1 style="color: red">BANG CUU CHUONG</h1>
+<script>
+    let sout;
+    let result;
+    sout = "<table border='1' width='900' height='300'>";
+    for (i = 1; i < 10; i++) {
+        sout = sout + "<tr>";
+        for (j = 2; j < 10; j++) {
+            result = j * i;
+            sout = sout + "<td>" + j + 'x' + i + '=' + result + "</td>";
+        }
+        sout = sout + '</tr>';
+    }
+    sout = sout + "</table>";
+    document.write(sout);
+</script>
+</body>
+</html>
