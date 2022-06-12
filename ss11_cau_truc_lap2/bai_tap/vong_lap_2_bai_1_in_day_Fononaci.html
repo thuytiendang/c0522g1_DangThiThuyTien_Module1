@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in day fibonaci </title>
+</head>
+<body>
+<script>
+    let fibonacci = parseInt(prompt('ban muon in ra bao nhieu so theo day fibonaci?'));
+    let number1 = 0;
+    let number2 = 1;
+    let number3;
+    let list = number1 + "," + number2;
+        for (let i = 1; i <= (fibonacci - 2); i++) {
+            number3 = number1 + number2;
+            list = list + "," + number3;
+            number1 = number2;
+            number2 = number3;
+        } document.write(list);
+</script>
+</body>
+</html>

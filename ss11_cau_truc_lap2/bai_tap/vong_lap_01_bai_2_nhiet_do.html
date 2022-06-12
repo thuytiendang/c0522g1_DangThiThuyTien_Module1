@@ -6,15 +6,25 @@
 </head>
 <body>
 <script>
-    let temperature= parseFloat(prompt('input current temperature: '));
-    if (temperature > 100) {
-        alert('giam nhiet do');
-    } else if(temperature < 20) {
-        alert('tang nhiet do');
-    } else {
-        alert('nhiet do binh thuong');
-    }
-
+    // let temperature= parseFloat(prompt('input current temperature: '));
+    // if (temperature > 100) {
+    //     alert('giam nhiet do');
+    // } else if(temperature < 20) {
+    //     alert('tang nhiet do');
+    // } else {
+    //     alert('nhiet do binh thuong');
+    // }
+    let temperature;
+    do {
+        temperature = parseFloat(prompt('input current temperature: '));
+        if (temperature > 100) {
+            alert('giam nhiet do');
+        } else if (temperature < 20) {
+            alert('tang nhiet do');
+        } else {
+            alert('nhiet do binh thuong');
+        }
+    } while (temperature < 20 || temperature > 100);
 </script>
 </body>
 </html>
