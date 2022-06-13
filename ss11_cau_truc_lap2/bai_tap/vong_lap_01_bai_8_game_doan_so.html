@@ -5,6 +5,28 @@
     <title>game doan so </title>
 </head>
 <body>
+<button type="button" onclick="play()">play game</button>
+<script>
+    function play() {
+        let maxNumber = parseInt(prompt('nhap so lon nhat trong khoang: '));
+        let minNumber = parseInt(prompt('nhap so nho nhat trong khoang: '));
+        let randomNumber = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+        let number;
+        let count = 0;
+        do {
+            number = parseInt(prompt('nhap so ban doan: '));
+            count++;
+            if (count > 3) {
+                alert('ban da het so lan doan.');
+                break;
+            } else if (number > randomNumber || number < randomNumber) {
+                alert('so ban doan chua chinh xac');
+            } else {
+                alert("chuc mung ban trung 500000d");
+            }
+        } while (number != randomNumber);
 
+    }
+</script>
 </body>
 </html>

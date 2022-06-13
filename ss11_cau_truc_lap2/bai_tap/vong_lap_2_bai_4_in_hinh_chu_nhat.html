@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in hình chữ nhật</title>
+</head>
+<body>
+<script>
+    let a = prompt('nhap chieu rong')
+    let b = prompt('nhap chieu dai')
+    for (i=1;i<=a;i++) {
+        for (j=1;j<=b;j++) {
+            if (i==1 || i==a || j==1 || j==b) {
+                document.write('*')
+            } else {
+                document.write('&nbsp&nbsp')
+            }
+        }document.write("<br>")
+    }
+</script>
+</body>
+</html>
