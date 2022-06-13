@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('nhap no n: '));
+    let sum = 15;
+    let factorial=1;
+    for (let i = 1; i <= n; i++) {
+        factorial=factorial*i;
+        sum += Math.pow(-1, i) * 1 / factorial;
+    }
+    document.write('tong cua phep tinh la ' + sum);
+</script>
+</body>
+</html>

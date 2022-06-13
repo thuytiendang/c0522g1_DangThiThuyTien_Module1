@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numberA = parseInt(prompt('input number a: '));
+    let numberB = parseInt(prompt('input number b: '));
+    for (let i = numberA; i >= 1; i--) {
+        if (numberA % i == 0 && numberB % i == 0) {
+            document.write('the biggest divisor is:' + i + "<br>");
+            break;
+        }
+    }
+    let i = numberA
+    while (i >= numberA) {
+        if (i % numberA == 0 && i % numberB == 0) {
+            document.write('the smallest multiple is: ' + i);
+            break;
+        } else {
+            i++;
+        }
+    }
+
+</script>
+</body>
+</html>

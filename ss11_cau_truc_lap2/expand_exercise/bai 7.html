@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let number = parseInt(prompt('input a number: '));
+    // let sum = 0;
+    // let avg = 1;
+    // for (let i = 0; i < number.toString().length; i++) {
+    //     sum = sum + parseInt(number.toString().charAt(i));
+    //     avg = avg * parseInt(number.toString().charAt(i));
+    // }
+    // console.log("Sum: " + sum);
+    // console.log("Avg: " + avg);
+    let number = parseInt(prompt('input a number: '));
+    let sum = 0;
+    let product = 1;
+    while(number>0) {
+        sum += number%10;
+        product *= number%10;
+        number = Math.floor(number/10);
+    }
+    document.write('tong la:' + sum + "va tich la:" + product);
+</script>
+</body>
+</html>
