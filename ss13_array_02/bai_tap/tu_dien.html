@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dictionary</title>
+</head>
+<body>
+<h2>English-Vietnamese Dictionary</h2>
+<input type="text" id="English">
+<input type="button" value="search" id="Vietnamese" onclick="find()"/>
+<p id="result"></p>
+<script>
+    function find() {
+        let string = document.getElementById('English').value;
+        let array1 = ['apple', 'hello', 'orange', 'chair', 'mark', 'table'];
+        let array2 = ['qua tao', 'xin chao', 'qua cam', 'cai ghe', 'mat na', 'cai ban'];
+        for (let i = 0; i < array1.length; i++) {
+            if (string === array1[i]) {
+                for (let j = 0; j < array2.length; j++) {
+                    if (i===j) {
+                        document.getElementById('result').innerText = array1[i] + ":" + array2[j];
+                    }
+                }
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

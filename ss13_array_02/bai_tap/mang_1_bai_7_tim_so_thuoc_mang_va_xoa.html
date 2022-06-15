@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 10; i++) {
+        arr[i] = +prompt('input a number: ');
+    }
+    let number = +prompt('input a number V: ');
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === number) {
+            while (i < 9) {
+                let change = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = change;
+                i++;
+            }
+            arr[arr.length - 1] = 0;
+        }
+
+    }
+    document.write(arr);
+
+</script>
+</body>
+</html>

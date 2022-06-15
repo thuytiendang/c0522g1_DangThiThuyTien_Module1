@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>use available array</title>
+</head>
+<body>
+<script>
+    // bai 1:
+    // let myColor = ["Red", "Green", "White", "Black"];
+    // myColor.join();
+    // document.write(myColor);
+
+    // bai 2:
+    // let number = prompt('nhap 1 day so: ');
+    // let array = [number[0]];
+    // for (let i = 0; i < number.length; i++) {
+    //     if (number[i] % 2 == 0 && number[i+1] % 2 == 0) {
+    //         array.push('-', number[i+1]);
+    //     } else {
+    //         array.push(number[i+1]);
+    //     }
+    // }
+    // document.write(array);
+    // bai 3:
+
+    let string = prompt('nhap 1 chuoi: ');
+    let arr = [];
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] === string[i].toLowerCase()) {
+            arr.push(string[i].toUpperCase());
+        }
+        else if (string[i] === string[i].toUpperCase()) {
+            arr.push(string[i].toLowerCase());
+        } else {
+            arr.push(string[i]);
+        }
+    }
+    document.write(arr);
+
+
+</script>
+</body>
+</html>

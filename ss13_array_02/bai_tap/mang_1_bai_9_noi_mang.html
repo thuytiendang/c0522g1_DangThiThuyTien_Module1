@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let arr1 = [];
+    // let arr2 = [];
+    // let arr3 = [];
+    // for (let i = 0; i < 10; i++) {
+    //     arr1[i] = +prompt('input a number: ');
+    //     // let array1 = arr1.toString();
+    // }
+    // for (let i = 0; i < 10; i++) {
+    //     arr2[i] = +prompt('input a number: ');
+    //     // let array2 = arr2.toString();
+    // }
+    // document.write('mang a: ' + arr1 + "<br>");
+    // document.write('mang b: ' + arr2 + '<br>');
+    // arr3 = arr1 + "," + arr2;
+    // document.write('mang c : ' + arr3)
+
+    let arrayNumbers = [];
+    let arrayA = [];
+    let arrayB = [];
+    for (let i = 0; i < 3; i++) {
+        arrayA[i] = parseInt(prompt('Nhập số nguyên vào mảng A:'))
+    }
+    for (let i = 0; i < 3; i++) {
+        arrayB[i] = parseInt(prompt('Nhập số nguyên vào mảng B:'))
+    }
+    for (let i = 0; i < arrayA.length; i++) {
+        arrayNumbers[i] = arrayA[i];
+
+    }
+    for (let j = 0; j < arrayB.length; j++) {
+        arrayNumbers[arrayA.length + j] = arrayB[j];
+    }
+    document.write('Mảng C là: ' + arrayNumbers);
+</script>
+</body>
+</html>
