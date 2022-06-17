@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doi vi tri</title>
+</head>
+<body>
+<script>
+    function swap(arr) {
+        let exchange = arr[0];
+        arr[0] = arr[1];
+        arr[1] = exchange;
+    }
+
+    let numberA = parseInt(prompt('input number a'));
+    let numberB = parseInt(prompt('input number b'));
+    let arr = [numberA, numberB];
+    swap(arr);
+    document.write(arr.toString());
+</script>
+</body>
+</html>

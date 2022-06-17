@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra ky tu thuoc mang</title>
+</head>
+<body>
+<script>
+    function checkCharacter() {
+        let arr = [];
+        for (let i = 0; i < 5; i++) {
+            arr[i] = prompt('input character: ');
+        }
+        let character = prompt('input a random character: ');
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === character) {
+                count++;
+            }
+        }
+        if (count >= 1) {
+            document.write(character + ' is in the array and appear ' + count + ' times');
+        } else {
+            document.write(character + ' is not in the array');
+        }
+    }
+    checkCharacter();
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function addNumber(parameter1,parameter2) {
+        if (parameter1 > parameter2) {
+            sum = parameter1+parameter2;
+            return sum;
+        } else {
+            alert('nhap lai so');
+        }
+    }
+    let parameter1= parseInt(prompt('input number 1 '));
+    let parameter2= parseInt(prompt('input number 2 '));
+    let result= addNumber(parameter1,parameter2);
+    document.write('tong 2 so la ' + result);
+</script>
+</body>
+</html>

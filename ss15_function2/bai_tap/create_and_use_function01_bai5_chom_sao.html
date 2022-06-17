@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findStar() {
+        let string = prompt('input name of star: ');
+        let array1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let array2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        let index = 0;
+        for (let i = 0; i < array1.length; i++) {
+            if (string === array1[i]) {
+                document.write(array1[i] + ' thuoc chom sao ' + array2[i]);
+                index++;
+            }
+        } if (index===0){
+        alert('nhap lai ten chom sao');
+        }
+    }
+        findStar();
+
+</script>
+</body>
+</html>

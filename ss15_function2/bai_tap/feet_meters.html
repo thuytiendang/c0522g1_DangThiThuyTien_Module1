@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // c1
+    // function footToMeter(foot) {
+    //      meter = foot * 0.305;
+    // }
+    //
+    // let foot = +prompt('nhap foot');
+    // footToMeter(foot);
+    // document.write("chuyen doi dc la" + meter)
+
+    // function footMeter() {
+    //     let foot = prompt("nhap foot")
+    //     meter = foot*0.305;
+    // }
+    // footMeter()
+    // document.write(meter)
+    function convert(foot,meter) {
+        foot = 3.279*meter;
+        meter= 0.305*foot;
+        document.write("chuyen tu meter qua foot " + foot+'<br>');
+        document.write("chuyen tu foot qua meter " + meter+'<br>');
+    }
+    let foot = parseInt(prompt("nhap foot"));
+    let meter = parseInt(prompt("nhap meter"));
+    convert(foot,meter);
+
+</script>
+</body>
+</html>

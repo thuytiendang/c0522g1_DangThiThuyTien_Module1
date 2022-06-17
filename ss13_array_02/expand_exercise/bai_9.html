@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt('nhap 1 chuoi: ');
+    // let arr = string.split('');
+    // let first = 0;
+    // let last = arr.length - 1;
+    // while (first < last) {
+    //     let b = arr[first]
+    //     arr[first] = arr[last];
+    //     arr[last] = b;
+    //     first++;
+    //     last--;
+    // }
+    // document.write(arr);
+    // let arr = [];
+    // // arr = string.toUpperCase();
+    // // document.write(arr);
+    // arr = string.toLowerCase();
+    // document.write(arr);
+    let arr = [];
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] === string[i].toLowerCase()) {
+            arr.push(string[i].toUpperCase());
+        }
+        else if (string[i] === string[i].toUpperCase()) {
+            arr.push(string[i].toLowerCase());
+        } else {
+            arr.push(string[i]);
+        }
+    }
+    document.write(arr);
+
+</script>
+</body>
+</html>

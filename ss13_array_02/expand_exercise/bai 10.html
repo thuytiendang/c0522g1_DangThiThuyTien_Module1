@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt('nhap 1 chuoi ');
+    let arr = string.split('');
+    let word = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] != ' ' && arr[i + 1] == ' ') {
+            document.write(arr[i] + '<br>');
+        }
+    }
+</script>
+</body>
+</html>

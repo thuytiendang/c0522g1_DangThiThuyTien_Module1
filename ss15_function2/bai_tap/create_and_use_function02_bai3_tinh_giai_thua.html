@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function calculateFactorial(x) {
+        let number = parseInt(prompt('input a number: '));
+        let factorial = 1;
+        for (let i = 1; i <= number; i++) {
+            factorial= factorial*i;
+        } document.write(number + "!" + "=" + factorial);
+    }
+    calculateFactorial();
+</script>
+</body>
+</html>
