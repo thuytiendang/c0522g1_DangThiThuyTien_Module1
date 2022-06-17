@@ -6,27 +6,21 @@
 </head>
 <body>
 <script>
-    function isPrime(number){
-        let count=0;
-        let divisor=0;
-        for (let i = 2; i <= 10000; i++) {
-            if (count < number) {
-                for (let j=1; j<=i; j++) {
-                    if (i % j ==0) {
-                        divisor++;
-                    }
-                } if (divisor==2) {
-                    document.write(i + '<br>');
-                    count++;
-                }
-                divisor = 0;
-            } else {
-                break;
+    function isPrime() {
+        let number = parseInt(prompt('input a number '));
+        let divisor = 0;
+        for (let i = 1; i <= number; i++) {
+            if (number % i == 0) {
+                divisor++;
             }
         }
+        if (divisor == 2) {
+            document.write(number + ' is a prime');
+        } else {
+            document.write(number + ' is not a prime')
+        }
     }
-    let number= parseInt(prompt('nhap so luong so nguyen to '));
-    let primeNumber = isPrime(number);
+    isPrime();
 </script>
 </body>
 </html>
