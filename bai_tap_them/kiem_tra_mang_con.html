@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number1 = +prompt('nhap so luong phan tu muon nhap: ');
+    let array1 = [];
+    for (let i = 0; i < number1; i++) {
+        array1[i] = +prompt('nhap phan tu cua mang:');
+    }
+    let number2;
+    do {
+        number2 = +prompt('nhap so luong phan tu muon nhap: ');
+    } while (number2 > number1);
+    let array2 = [];
+    for (let i = 0; i < number2; i++) {
+        array2[i] = +prompt('nhap phan tu cua mang:');
+    }
+
+    function checkArray(array1, array2) {
+        for (let i = 0; i < array1.length; i++) {
+            if (array1[i] === array2[0]) {
+                for (let j = 1; j < array2.length; j++) {
+                    if (array1[j + i] !== array2[j]) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+
+    alert(checkArray(array1, array2));
+
+</script>
+</body>
+</html>

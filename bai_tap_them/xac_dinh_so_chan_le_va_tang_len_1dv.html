@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = +prompt('nhap so luong phan tu muon nhap: ');
+    let array = [];
+    for (let i = 0; i < number; i++) {
+        array[i] = +prompt('nhap phan tu cua mang:');
+    }
+    document.write(array.toString() + '<br>');
+    let integer = parseInt(prompt('input an integer: '));
+
+    function checkNumber(a, b) {
+        for (let j = 0; j < a.length; j++) {
+            if (a[j] === b) {
+                a[j] = -1;
+            }
+        }
+        if (b % 2 !== 0) {
+            for (let j = 0; j < a.length; j++) {
+                if (a[j] % 2 === 0) {
+                    a[j] = a[j] + 1;
+                }
+            }
+        } else if (b % 2 === 0) {
+            for (let j = 0; j < a.length; j++) {
+                if (a[j] % 2 !== 0 && a[j]!== -1) {
+                    a[j] = a[j] + 1;
+                }
+            }
+        }
+        document.write(array.toString());
+    }
+    checkNumber(array, integer);
+</script>
+</body>
+</html>

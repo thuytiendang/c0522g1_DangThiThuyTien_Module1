@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt('input a number:'));
+
+    function isFibonacci(number) {
+        let number1 = 0;
+        let number2 = 1;
+        let number3 = 0;
+        while (number3 <= number) {
+            number3 = number2 + number1;
+            if (number3 > number) {
+                return false;
+            }
+            if (number3 === number) {
+                return true;
+            }
+            number1 = number2;
+            number2 = number3;
+        }
+        return false;
+    }
+    function isPrime(number) {
+        let division = 0;
+        for (let i = 1; i <= number; i++) {
+            if (number % i === 0) {
+                division++;
+            }
+        }
+        if (division === 2) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    for (let i = 0; i < number; i++) {
+        if (true === isFibonacci(i) && isPrime(i) === true) {
+            document.write(i + '<br>')
+        }
+    }
+</script>
+</body>
+</html>
