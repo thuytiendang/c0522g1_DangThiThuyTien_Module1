@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(length,width) {
+            this.length = length;
+            this.width = width;
+        }
+        setLength(newLength){
+            this.length=newLength;
+        }
+        setWidth(newWidth){
+            this.width=newWidth;
+        }
+        getArea(){
+            return this.length*this.width;
+        }
+        getPerimeter(){
+            return 2*(this.length+this.width);
+        }
+    }
+    let rectangle = new Rectangle(2,3);
+    rectangle.setLength(3);
+    rectangle.setWidth(5);
+    document.write('dien tich: ' + rectangle.getArea() + '<br>' + 'chu vi: ' + rectangle.getPerimeter());
+</script>
+</body>
+</html>
