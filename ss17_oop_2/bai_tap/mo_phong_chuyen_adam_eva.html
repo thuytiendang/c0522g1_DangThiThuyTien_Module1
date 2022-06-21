@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(newWeight) {
+            this.weight = newWeight;
+        }
+
+        isEmpty() {
+            if (this.weight <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        decreaseWeight() {
+            if (this.isEmpty()) {
+                document.write('hết táo ròi huhu')
+            } else {
+                this.weight--;
+            }
+        }
+
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        };
+
+        isMale() {
+            if (this.gender === 1) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+
+        setName(newName) {
+            this.name = newName;
+        };
+
+        getName() {
+            return this.name;
+        };
+
+        setGender() {
+            if (this.isMale()) {
+                return 'male'
+            } else {
+                return 'female';
+            }
+        };
+
+        setWeight(newWeight) {
+            this.weight = newWeight;
+        };
+
+        getWeight() {
+            return this.weight;
+        };
+
+        say(string) {
+            document.write(string);
+        };
+
+        checkApple(apple){
+            return apple.isEmpty();
+        }
+        eat(apple){
+            if (apple.getWeight()>0){
+                apple.decreaseWeight();
+            } else {
+                document.write('hết táo ròi huhu');
+            }
+        }
+        getInfo(human){
+            document.write(human.name + '' + human.weight + '' + human.gender);
+        }
+    }
+    let adam = new Human('adam',1,50);
+    let eva = new Human('eva',0,45);
+    let apple = new Apple(10);
+
+
+    adam.checkApple(apple);
+    adam.say('toi la adam. Ban thay vay co duoc khong' + '<br>');
+    eva.say('toi la Eva. Phai lam sao, phai lam sao' + '<br>');
+
+    while (apple.isEmpty() === false){
+        adam.say('Eva-em an tao di -.-' + "<br>");
+        document.write('eva an tao' + '<br>');
+        eva.eat(apple);
+
+        document.write('qua tao con: ' + apple.getWeight() + 'kg' + '<br>');
+        document.write('vi an tao ma eva tang len : ' + eva.getWeight() + 'kg' + '<br>');
+        document.write('<br>');
+
+        adam.say('Adam-anh an tao di -.-' + "<br>");
+        document.write('adam an tao' + '<br>');
+        adam.eat(apple);
+
+        document.write('qua tao con: ' + apple.getWeight() + 'kg' + '<br>');
+        document.write('vi an tao ma eva tang len : ' + adam.getWeight() + 'kg' + '<br>');
+    }
+
+
+</script>
+</body>
+</html>
