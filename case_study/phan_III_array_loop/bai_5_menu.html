@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+        background-color: blueviolet;
+    }
+</style>
+<body>
+<h1 style="color: aqua">QUÁN CAFE CỦA TIÊN CUTE -.-</h1>
+<h3 style="color: blue">MENU</h3>
+<table border="1" >
+    <th>cac loai do uong</th>
+    <tr>
+        <td>1.cafe</td>
+    </tr>
+    <tr>
+        <td>2.cam vắt</td>
+    </tr>
+    <tr>
+        <td>3.nước ép cà rốt</td>
+    </tr>
+    <tr>
+        <td>4.nước ép cà chua</td>
+    </tr>
+    <tr>
+        <td>5.nước lọc</td>
+    </tr>
+    <tr>
+        <td>6.nước dừa</td>
+    </tr>
+
+</table>
+<button onclick="show()">STAR ORDER</button>
+<script>
+    function show(){
+        alert(' chào mừng bạn đến với QUÁN CAFE CỦA TIÊN CUTE -.-')
+        let number1 = ["1", "2", "3", "4", "5", "6"];
+        let str = [50000, 60000, 40000, 40000, 10000, 50000];
+        let number;
+        let sum = 0;
+        let quantity;
+        let result=0;
+        do {
+            number = prompt("nhập số thứ tự loại nước mà bạn muốn thưởng thức và nhập 7 nếu bạn không muốn order nữa");
+            for (let i = 0; i < number1.length; i++)
+                if (number === number1[i]) {
+                    alert('giá nước mà bạn order là: ' + str[i]);
+                    quantity = +prompt('nhập số lượng bạn muốn mua: ');
+                    result=str[i] * quantity;
+                    sum += result;
+                }
+        } while (number != 7)
+        alert('tổng số tiền bạn phải trả là: ' + sum);
+    }
+
+
+
+</script>
+</body>
+</html>

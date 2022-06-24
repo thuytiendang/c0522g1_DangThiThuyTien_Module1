@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh luong va thue thu nhap</title>
+</head>
+<body>
+<script>
+    let salary = parseFloat(prompt('input salary (million):'));
+    let currentSalary = 0;
+    let tax = 0
+    if (salary>15){
+        tax = salary *20 /100;
+        currentSalary = salary - tax;
+    } else if (salary>7) {
+        tax = salary *10 /100;
+        currentSalary = salary - tax;
+    } else {
+        tax = salary *5 /100;
+        currentSalary = salary - tax;
+    }
+    document.write('thue ma nhan vien phai tra la : ' + tax + ' trieu dong' + '<br>' + 'so tien that su ma nhan vien nhan duoc la: ' + currentSalary + ' trieu dong');
+</script>
+</body>
+</html>

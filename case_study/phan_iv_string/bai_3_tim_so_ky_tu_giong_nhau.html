@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let stringA = prompt('nhap 1 chuoi a: ');
+    let stringB = prompt('nhap chuoi b: ');
+
+    function commonCharacterCount(stringA, stringB) {
+        stringA = stringA.split('');
+        stringB = stringB.split('');
+        let array = [];
+        for (let i = 0; i < stringA.length; i++) {
+            for (let j = 0; j < stringB.length; j++) {
+                if (stringA[i] === stringB[j]) {
+                    array.push(stringA[i]);
+                    stringB.splice(j, 1);
+                    break;
+                }
+            }
+        }
+        return array;
+    }
+
+    document.write('chuoi 1: ' + stringA + '<br>');
+    document.write('chuoi 2: ' + stringB + '<br>');
+    document.write('2 xau array 1 va array 2 co ' + commonCharacterCount(stringA, stringB).length + ' ky tu chung la  ' + commonCharacterCount(stringA, stringB).toString());
+</script>
+</body>
+</html>

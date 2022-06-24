@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>một hàm chuẩn hóa xâu ký tự hàm tìm từ dài nhất trong 1 xâu ký tự</title>
+</head>
+<body>
+<script>
+    function editString(arr) {
+        arr[0] = arr[0].toUpperCase();
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] !== ' ' && arr[i - 1] === ' ') {
+                arr[i] = arr[i].toUpperCase();
+            }
+            if (arr[i] === ' ' && arr[i - 1] === ' ') {
+                arr.splice(i, 1);
+            }
+        }
+        return arr.join('');
+    }
+
+    function findLongestWord(string) {
+        let array = [];
+        let arr1 = string.split(' ').sort(function (a, b) {
+            return b.length - a.length;
+        });
+        let max = arr1[0].length;
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i].length === max) {
+                array.push(arr1[i]);
+            }
+
+        }
+        return array;
+    }
+
+    function main() {
+        let string = prompt('nhap chuoi ki tu');
+        let word = string.toLowerCase().trim();
+        let arr = word.split('');
+        document.write('xau truoc khi chuan hoa: ' + string + '<br>');
+        document.write('xau sau khi chuan hoa: ' + editString(arr) + '<br>');
+        document.write('tu co nhieu ki tu nhat la: ' + findLongestWord(editString(arr)) + ' ,gom co: ' + findLongestWord(editString(arr))[0].length + ' ky tu');
+    }
+
+    main();
+</script>
+</body>
+</html>

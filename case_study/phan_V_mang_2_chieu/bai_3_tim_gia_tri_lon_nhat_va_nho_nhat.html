@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findValue() {
+        let array = [];
+        let row = +prompt('nhap so dong cua mang:');
+        let col = +prompt('nhap so cot cua mang:');
+        for (let i = 0; i < row; i++) {
+            let arr = [];
+            for (let j = 0; j < col; j++) {
+                arr[j] = +prompt('nhap so thuoc mang tai \[' + i + '\]\[' + j + '\]: ');
+            }
+            array.push(arr);
+        }
+        let max = array[0][0];
+        for (let i = 0; i < row; i++) {
+            for (let j = 0; j < col; j++) {
+                if (array[i][j] > array[0][0]) {
+                    max = array[i][j];
+                }
+            }
+        }
+        document.write(' gia tri lon nhat la: ' + max + '<br>');
+        let min = array[0][0];
+        for (let i = 0; i < row; i++) {
+            for (let j = 0; j < col; j++) {
+                if (array[i][j] < array[0][0]) {
+                    min = array[i][j];
+                }
+            }
+        }
+        document.write('gia tri nho nhat la: ' + min);
+    }
+    findValue();
+</script>
+</body>
+</html>

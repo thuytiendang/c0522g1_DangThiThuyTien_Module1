@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm chỉ số của phân số lớn nhất </title>
+</head>
+<body>
+<script>
+    let numerators = [];
+    let denominators = [];
+
+    let characterOfArray = +prompt('nhap so phan tu muon nhap o mang: ');
+    for (let i = 0; i < characterOfArray; i++) {
+        numerators[i] = +prompt('nhap mot so2 của mang :');
+    }
+    document.write("arrA = [ " + numerators + "]" + "<br>");
+
+    for (let i = 0; i < characterOfArray; i++) {
+        denominators[i] = +prompt('nhap mot so cua mang :');
+    }
+    document.write("arrB = [ " + denominators + "]" + "<br>");
+
+    let max = numerators[0] / denominators[0];
+    let index;
+    for (let i = 1; i < numerators.length; i++) {
+        if (numerators[i] / denominators[i] > max) {
+            max = numerators[i] / denominators[i];
+            index = i;
+        }
+    }
+    document.write(max + 'la phan so lon nhat.' + '<br>' + 'co chi so la:' + index);
+</script>
+</body>
+</html>

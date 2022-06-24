@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra ky tu trong bang chu cai tieng anh</title>
+</head>
+<body>
+<script>
+    let character;
+    do {
+        character= prompt('input a character: ');
+    } while (character%character===0)
+    character = character.toLowerCase();
+
+    switch (character) {
+        case 'u':
+            alert( character + '  is vowel');
+            break;
+        case 'o':
+            alert( character + ' is vowel');
+            break;
+        case 'i':
+            alert( character + ' is vowel');
+            break;
+        case 'a':
+            alert( character + ' is vowel');
+            break;
+        case 'e':
+            alert( character + ' is vowel');
+            break;
+         default:
+             alert(character + ' is consonant');
+    }
+</script>
+</body>
+</html>

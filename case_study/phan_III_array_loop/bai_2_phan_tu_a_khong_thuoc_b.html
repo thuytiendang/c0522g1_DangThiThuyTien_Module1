@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A</title>
+</head>
+<body>
+<script>
+    let arrayA = [];
+    let arrayB = [];
+    let arrayC = [];
+
+    let characterOfArray1 = +prompt('nhap so phan tu muon nhap o mang ddau tien:');
+    for (let i = 0; i < characterOfArray1; i++) {
+        arrayA[i] = +prompt('nhap mot so:');
+    }
+    document.write("arrA = [ " + arrayA + "]" + "<br>");
+
+    let characterOfArray2 = +prompt('nhap so phan tu muon nhap o mang thu 2:');
+    for (let i = 0; i < characterOfArray2; i++) {
+        arrayB[i] = +prompt('nhap mot so:');
+    }
+    document.write("arrB = [ " + arrayB + "]" + "<br>");
+
+    for (let i = 0; i < arrayB.length; i++) {
+        if (arrayA.indexOf(arrayB[i]) === -1 && arrayC.indexOf(arrayB[i]) === -1) {
+            arrayC.push(arrayB[i]);
+        }
+    }
+    arrayC.sort(function (a,b){
+        return a - b
+    })
+    document.write("arrC = [ " + arrayC + "]" + "<br>");
+
+
+</script>
+</body>
+</html>

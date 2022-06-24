@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function calculateSum() {
+        let row = +prompt('nhap so dong cua mang:');
+        let col = +prompt('nhap so cot cua mang:');
+        let array = [];
+        let sum = 0;
+        for (let i = 0; i < row; i++) {
+            let arr = [];
+            for (let j = 0; j < col; j++) {
+                arr[j] = +prompt('nhap so thuoc mang tai \[' + i + '\]\[' + j + '\]: ');
+            }
+            array.push(arr);
+        }
+        for (let i = 0; i < row; i++) {
+            for (let j = 0; j < col; j++) {
+                if (array[i][j] % 2 === 0) {
+                    sum += array[i][j];
+                }
+            }
+        }
+        for (let i = 0; i < row; i++) {
+            document.write(array[i] + '<br>');
+        }
+        document.write('tong cac so chang la: ' + sum);
+    }
+
+    calculateSum();
+</script>
+</body>
+</html>
