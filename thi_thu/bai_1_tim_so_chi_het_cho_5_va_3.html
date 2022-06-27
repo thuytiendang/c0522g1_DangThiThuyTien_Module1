@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number;
+    let arrayA = [];
+    do {
+        number = parseInt(prompt('nhap so phan tu ban muon nhap vao mang: '));
+    } while (number > 50 || number%number !==0 || number <= 0);
+    for (let i = 0; i < number; i++) {
+        arrayA[i] = parseInt(prompt('nhap mot so:'));
+    }
+    document.write('mang ban nhap la: ' + arrayA + '<br>');
+    let sum = 0;
+    let count = 0;
+    for (let i = 0; i < arrayA.length; i++) {
+        if (arrayA[i] % 5 === 0) {
+            if (i % 3 === 0) {
+                sum += arrayA[i];
+                count++;
+            }
+        }
+    }
+    document.write('gia tri trung binh cua mang chia het cho 5 tai index chia het cho 3 la: ' + sum / count);
+
+</script>
+</body>
+</html>

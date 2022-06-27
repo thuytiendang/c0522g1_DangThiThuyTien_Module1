@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class BankAccount {
+        constructor(account, name, nameOfBank, money) {
+            this.account = account;
+            this.name = name;
+            this.nameOfBank = nameOfBank;
+            this.money = money;
+        }
+
+        setAccount(newAccount) {
+            this.account = newAccount;
+        }
+
+        getAccount() {
+            return this.account;
+        }
+
+        setName(newName) {
+            this.name = newName;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setNameOfBank(newNameOfBank) {
+            this.nameOfBank = newNameOfBank;
+        }
+
+        getNameOfBank() {
+            return this.nameOfBank;
+        }
+
+        setMoney(newMoney) {
+            this.money = newMoney;
+        }
+
+        getMoney() {
+            return this.money;
+        }
+       toString(){
+            document.write('your account: ' + this.getAccount() + '<br>');
+            document.write('name: ' + this.getName() + '<br>');
+            document.write('bank: ' + this.getNameOfBank() + '<br>');
+            document.write('money: ' + this.getMoney() + '<br>');
+       }
+    }
+    let list=[];
+    function newBankAccount() {
+        let bankAccount= new BankAccount();
+        bankAccount.setAccount(prompt('nhap so tai khoan:'));
+        bankAccount.setName(prompt('nhap ten chu tai khoan:'));
+        bankAccount.setNameOfBank(prompt('nhap ten ngan hang:'));
+        bankAccount.setMoney(prompt('nhap tong so tien:'));
+         list.push(bankAccount)
+
+    }
+    function showList() {
+        for (let i=0;i<list.length;i++){
+            list[i].toString()
+        }
+
+    }
+    newBankAccount()
+    newBankAccount()
+    showList()
+</script>
+</body>
+</html>

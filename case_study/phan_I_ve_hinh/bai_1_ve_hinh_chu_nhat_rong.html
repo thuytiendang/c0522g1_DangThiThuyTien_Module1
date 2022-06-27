@@ -6,18 +6,35 @@
 </head>
 <body>
 <script>
+    // let width = parseInt(prompt('input width:'));
+    // let length = parseInt(prompt('input length:'));
+    // for (let i = 1; i <= width; i++) {
+    //     for (let j = 1; j <= length; j++) {
+    //         if (i == 1 || i == width || j == 1 || j == length) {
+    //             document.write('*')
+    //         } else {
+    //             document.write('&nbsp&nbsp')
+    //         }
+    //     }
+    //     document.write("<br>")
+    // }
     let width = parseInt(prompt('input width:'));
     let length = parseInt(prompt('input length:'));
+    let rectangular = "<table>";
     for (let i = 1; i <= width; i++) {
+        rectangular += "<tr>";
         for (let j = 1; j <= length; j++) {
-            if (i == 1 || i == width || j == 1 || j == length) {
-                document.write('*')
+            if (i > 1 && i < width && j > 1 && j < length) {
+                rectangular += "<td>" + "</td>";
             } else {
-                document.write('&nbsp&nbsp')
+                rectangular += "<td>" + "*" + "</td>";
             }
         }
-        document.write("<br>")
+        rectangular += "</tr>";
     }
+    rectangular += "</table>";
+    document.write(rectangular);
+
 </script>
 </body>
 </html>
