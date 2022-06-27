@@ -24,6 +24,15 @@
         let arr1 = string.split(' ').sort(function (a, b) {
             return b.length - a.length;
         });
+        // for (let i = 0; i < arr1.length; i++) {
+        //     for (let j = 0; j < i; j++) {
+        //         if (arr1[i] > arr1[j]) {
+        //             let change = arr1[i];
+        //             arr1[i] = arr1[j];
+        //             arr1[j] = change;
+        //         }
+        //     }
+        // }
         let max = arr1[0].length;
         for (let i = 0; i < arr1.length; i++) {
             if (arr1[i].length === max) {
@@ -44,6 +53,7 @@
     }
 
     main();
+
 </script>
 </body>
 </html>
